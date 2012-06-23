@@ -1,0 +1,411 @@
+﻿body, img
+{
+	margin:0;
+	padding:0;
+	border:0;
+}
+body
+{
+	color:White;
+	background-color:#01325a;
+}
+body, form, table
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+table
+{	
+	width:100%;
+}
+a
+{
+	color:#eebb55;
+}
+canvas
+{
+	position:absolute;
+}
+hr
+{
+	color:#eebb55;
+	background-color:#eebb55;
+	height:2px;
+	border:0;
+}
+.top
+{
+	position:absolute;
+	width:100%;
+	height:52px;
+	background-image:url(resources/top.png);
+	background-repeat:repeat;
+}
+.container
+{
+	position:relative;
+	top:52px;
+	width:700px;
+	margin:0 auto;
+}
+.logo
+{
+	position:absolute;
+	left:40px;
+	top:-52px;
+}
+.html5
+{
+	position:absolute;
+	left:624px;
+	top:-51px;
+}
+.globe
+{
+	position:absolute;
+	left:-70px;
+}
+.outer
+{
+	visibility:hidden;
+	position:relative;
+	top:30px;
+	margin:0 auto;
+	width:86%;
+	height:590px;
+	padding:15px;
+	background-color:rgba(0,21,35,0.8);
+	border-style:groove;
+	border-color:#67879e;
+	border-width:4px 0;
+	-moz-box-shadow:10px 30px 20px #002545;
+	-webkit-box-shadow:10px 30px 20px #002545;
+	box-shadow:10px 30px 20px #002545;
+}
+.inner
+{
+	position:relative;
+	margin:10px auto;
+	width:90%;
+	height:500px;
+	background-color:rgba(128,128,128,0.2);
+	border-style:solid;
+	border-color:#eebb55;
+	border-width:0 2px 2px 2px;
+}
+#bar
+{
+	position:absolute;
+	width:100%;
+}
+.title, .footer
+{
+	text-align:center;
+	width:100%;
+	cursor:default;
+}
+.title
+{
+	font-size:50px;
+	text-shadow:0 0 4px #FFFFFF;
+}
+sup
+{
+	font-size:70%;
+}
+.footer
+{
+	position:absolute;
+	bottom:2px;
+	font-size:10px;
+}
+.settings
+{
+	display:block;
+	position:absolute;
+	overflow:hidden;
+	top:24px;
+	left:20px;
+	-webkit-transition:all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	-o-transition:all 0.5s ease-in;
+	-ms-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in;
+
+	opacity:0;
+	filter:alpha(opacity=0);
+	width:1px;
+	height:1px;
+	padding:-100px 0 0 -100px;
+}
+.settings hr
+{
+	width:468px;
+	margin-right:30px;
+}
+.show
+{
+	opacity:1;
+	filter:alpha(opacity=100);
+	width:500px;
+	height:480px;
+	padding:0;
+}
+td
+{
+	vertical-align:middle;
+	text-align:left;
+}
+h1
+{
+	font-size:24px;
+	font-weight:bold;
+	margin:.5em 1em;
+}
+h2, th
+{
+	font-size:20px;
+	font-weight:normal;
+	color:#E1F7FF;
+}
+h2
+{
+	margin:0 0 10px 0;
+}
+th
+{
+	text-align:left;
+	padding-bottom:20px;
+}
+input, select
+{
+	background:#E1F7FF;
+	border:none;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	border-radius:3px;
+	font:13px Arial, Helvetica, sans-serif;
+	outline:none;
+	padding:2px;
+}
+input:disabled
+{
+	color:#909090;
+}
+input:not([type=submit]):focus, select:focus
+{
+	background:#ffffff;
+	-moz-box-shadow:0 0 3px #7FDEFF;
+	-webkit-box-shadow:0 0 3px #7FDEFF;
+	box-shadow:0 0 3px #7FDEFF;
+}
+input:not([type=checkbox])
+{
+	width:300px;
+}
+select
+{
+	width:304px;
+}
+.dialog
+{
+	display:none;
+	background:#01325a url(resources/dialog.jpg) no-repeat !important;
+	text-align:center;
+}
+.progressbar
+{
+	margin-top:16px;
+}
+.buttons
+{
+	margin:22px 84px 18px 0;
+}
+#about
+{
+	width:100%;
+	background-image:url(resources/about.jpg) !important;
+}
+.banner
+{
+	position:absolute; 
+	left:1em; 
+	top:1em; 
+}
+
+@-webkit-keyframes show-clipboard {
+    0% {
+		opacity:0;
+    }
+    85% {
+		opacity:1;
+    }
+    100% {
+		opacity:0.4;
+    }
+}
+@-moz-keyframes show-clipboard {
+    0% {
+		opacity:0;
+    }
+    62% {
+		opacity:1;
+    }
+    100% {
+		opacity:0.4;
+    }
+}
+#clipboard_button
+{
+	position:fixed;
+	right:40px;
+	top:80px;
+	cursor:pointer;
+	
+	animation-duration:4s;
+	-moz-animation-duration:4s;
+	-webkit-animation-duration:4s;
+	
+	animation-timing-function:ease-in-out;
+	-moz-animation-timing-function:ease-in-out;
+	-webkit-animation-timing-function:ease-in-out;
+	
+	text-align:right;
+}
+#clipboard_button #clipboard_image
+{
+	background-image:url('resources/clipboard.png');
+	background-size:100%;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	-ms-background-size:100%;
+	background-repeat:no-repeat;
+	text-align:center;
+	color:Black;
+	font-size:large;
+	padding:50px 50px 30px 50px;
+}
+.clipboard_button
+{
+	display:none;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	-ms-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+}
+.clipboard_button_active, .menu
+{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	animation-name:show-clipboard;
+    -webkit-animation-name:show-clipboard;
+    -moz-animation-name:show-clipboard;
+	-webkit-transition:opacity 2s ease-in-out;
+	-moz-transition:opacity 2s ease-in-out;
+	-o-transition:opacity 2s ease-in-out;
+	-ms-transition:opacity 2s ease-in-out;
+	transition:opacity 2s ease-in-out;
+}
+.menu
+{
+	display:none;
+	width:34px;
+	height:34px;
+	-moz-border-radius:0 0 6px 6px;
+	-webkit-border-radius:0 0 6px 6px;
+	-khtml-border-radius:0 0 6px 6px;
+	border-radius:0 0 6px 6px;
+	border-style:solid;
+	border-color:#eebb55;
+	border-width:0 2px 2px 2px;
+	background-color:#426bf2;
+	background-position:center;
+	background-size:80%;
+	background-repeat:no-repeat;
+	cursor:pointer !important;
+	vertical-align:top;
+}
+.clipboard_button_active:hover, .menu:hover
+{
+	opacity:1;
+	filter:alpha(opacity=100);
+	-webkit-transition:opacity 0.2s ease-in-out;
+	-moz-transition:opacity 0.2s ease-in-out;
+	-o-transition:opacity 0.2s ease-in-out;
+	-ms-transition:opacity 0.2s ease-in-out;
+	transition:opacity 0.2s ease-in-out;
+}
+#menus
+{
+	vertical-align:top;
+	position:fixed;
+	top:0;
+	right:160px;
+}
+#clipboard_menu
+{
+	background-image:url(resources/clipboard_48_mono.png);
+	margin-right:12px;
+}
+#download_menu
+{
+	background-image:url(resources/fileDN_48_mono.png);
+}
+#upload_menu
+{
+	overflow:hidden;
+	background-image:url(resources/fileUP_48_mono.png);
+}
+#upload
+{
+	width:99%;
+	height:99%;
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100px;
+	opacity:0.01;
+	filter:alpha(opacity=1);
+}
+
+.hidden
+{
+	display:none;
+}
+
+#virt_keyboard
+{
+	position:absolute;
+	background:#426bf2 url(resources/keyboard.png) center no-repeat !important;
+	background-size:120% !important;
+	display:none;
+}
+#virt_keyboard input
+{
+	position:absolute;
+	top:50%;
+	width:1px;
+	height:1px;
+	color:#426bf2;
+	background-color:#426bf2;
+	border:0 none #426bf2;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+#clipboard_menu:active, #virt_keyboard:active
+{
+	background-color:#01325a !important;
+}
+
+.cursor
+{
+	position:absolute;
+	display:block;
+	z-index:1000;
+	width:32px;
+	height:32px;
+	cursor:none;
+}

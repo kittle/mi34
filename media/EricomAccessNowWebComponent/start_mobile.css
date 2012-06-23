@@ -1,0 +1,48 @@
+﻿.outer
+{
+	-moz-box-shadow:0px 0px 0px;
+	-webkit-box-shadow:0px 0px 0px;
+	box-shadow:0px 0px 0px;
+}
+.title
+{
+	text-shadow:0px 0px 0px;
+}
+.settings
+{
+	opacity:1;
+	width:500px;
+	height:480px;
+	padding:0;
+}
+input:not([type=submit]):focus, select:focus
+{
+	-moz-box-shadow:0px 0px 0px;
+	-webkit-box-shadow:0px 0px 0px;
+	box-shadow:0px 0px 0px;
+}
+
+.clipboard_button
+{
+	-webkit-transition-duration:0s;
+	-moz-transition-duration:0s;
+	-o-transition-duration:0s;
+	-ms-transition-duration:0s;
+	transition-duration:0s;
+}
+.clipboard_button_active
+{
+	-webkit-transition-duration:0s;
+	-moz-transition-duration:0s;
+	-o-transition-duration:0s;
+	-ms-transition-duration:0s;
+	transition-duration:0s;
+}
+.clipboard_button_active:hover
+{
+	-webkit-transition-duration:0s;
+	-moz-transition-duration:0s;
+	-o-transition-duration:0s;
+	-ms-transition-duration:0s;
+	transition-duration:0s;
+}

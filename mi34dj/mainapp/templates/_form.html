@@ -1,0 +1,24 @@
+{% comment %}
+
+<form action="{{ action }}" method="POST"> {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="{{ buttonname|default:'Add' }}" />
+</form>
+
+{% endcomment %}
+
+
+<form action="{{ action }}" method="POST">  {% csrf_token %}
+    {# Include the hidden fields in the form #}
+    {% for hidden in form.hidden_fields %}
+	    {{ hidden }}
+    {% endfor %}
+    
+    {% for field in form.visible_fields %}
+        <div class="fieldWrapper">            
+            {{ field.errors }}
+            {{ field.label_tag }}: {{ field }}
+        </div>
+    {% endfor %}
+    <p><input type="submit" value="{{ buttonname|default:'Add' }}" /></p>
+</form>

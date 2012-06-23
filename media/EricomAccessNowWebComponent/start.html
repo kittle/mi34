@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow, noarchive, nocache" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="resources/AccessNow_64.png" />
+    <link rel="apple-touch-icon-precomposed" href="resources/AccessNow_64.png" />
+
+    <title>Ericom&reg; AccessNow&trade;</title>
+
+    <link rel="shortcut icon" href="resources/accessnow.ico" />
+	<link rel="stylesheet" media="all" href="resources/jquery-ui-1.8.10.custom.css" />
+    <link rel="stylesheet" media="all" href="start.css" />
+    <link rel="stylesheet" media="only screen and (max-device-width: 1030px)" href="start_mobile.css" />
+
+    <base target="_blank" />
+
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="lib/lib.min.js"></script>
+    <script type="text/javascript" src="ericom.min.js"></script>
+    <script type="text/javascript" src="start.min.js"></script>
+</head>
+<body>
+    <div class="top"></div>
+
+    <div class="container">
+        <a href="http://www.ericom.com" class="logo"><img src="resources/ericom.jpg" alt="Ericom Software" /></a>
+        <a href="http://www.w3.org/html/logo/" class="html5"><img src="resources/HTML5_Logo_64.png" alt="HTML5" width="50" height="50" /></a>
+        <img src="resources/globe.jpg" alt="" class="globe" />
+        <div class="outer">
+            <div class="title">Ericom<sup>&reg;</sup> AccessNow<sup>&trade;</sup></div>
+            <div class="inner">
+                <img id="bar" src="resources/bar.png" alt="" />
+                <div class="settings">
+                    <form method="post">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">
+                                        Connection Details
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="address">Ericom AccessNow Server:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="address" id="address" placeholder="Leave empty if same as Web Server" autofocus="autofocus" spellcheck="false" autocorrect="off" autocapitalize="off" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="full_address">RDP Host:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="full address" id="full_address" placeholder="Leave empty if same as AccessNow Server" spellcheck="false" autocorrect="off" autocapitalize="off" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="username">User name:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="username" id="username" placeholder="user name on host" spellcheck="false" autocorrect="off" autocapitalize="off" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="password">Password:</label>
+                                    </td>
+                                    <td>
+                                        <input type="password" name="html password" id="password" placeholder="password on host" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="checkbox" id="remember" />
+                                        <label for="remember">&nbsp;Remember password</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="domain">Domain:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="domain" id="domain" placeholder="domain on host" spellcheck="false" autocorrect="off" autocapitalize="off" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="checkbox" id="encryption" />
+                                        <label for="encryption">&nbsp;Enable SSL encryption for remote session</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="checkbox" name="blaze acceleration" id="blaze_acceleration" data-for="#blaze_image_quality" checked="checked" />
+                                        <label for="blaze_acceleration">&nbsp;Compression and Acceleration</label>
+                                    </td>
+                                </tr>
+                                <tr>
+	                                <td>
+                                        <label for="blaze_image_quality">Acceleration / Quality:</label>
+                                    </td>
+	                                <td>
+                                        <select name="blaze image quality" id="blaze_image_quality">
+		                                    <option value="20">Fastest / Fair Quality</option>
+		                                    <option value="40" selected="selected">Very Fast / Good Quality (Recommended)</option>
+		                                    <option value="75">Fast / High Quality</option>
+		                                    <option value="95">Good / Very High Quality</option>
+	                                    </select>
+                                    </td>
+                                </tr>
+                                <tr>
+	                                <td>
+                                        <label for="resolution">Screen resolution:</label>
+                                    </td>
+	                                <td>
+                                        <select id="resolution">
+		                                    <option value="browser" selected="selected">Fit to browser window</option>
+		                                    <option value="screen">Fit to screen (Full Screen)</option>
+		                                    <option value="640,480">640 x 480</option>
+		                                    <option value="800,600">800 x 600</option>
+		                                    <option value="1024,768">1024 x 768</option>
+		                                    <option value="1280,720">1280 x 720</option>
+		                                    <option value="1280,768">1280 x 768</option>
+		                                    <option value="1280,1024">1280 x 1024</option>
+		                                    <option value="1440,900">1440 x 900</option>
+		                                    <option value="1440,1050">1440 x 1050</option>
+		                                    <option value="1600,1200">1600 x 1200</option>
+		                                    <option value="1680,1050">1680 x 1050</option>
+		                                    <option value="1920,1080">1920 x 1080</option>
+		                                    <option value="1920,1200">1920 x 1200</option>
+	                                    </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="keyboard_locale">Keyboard locale:</label>
+                                    </td>
+                                    <td>
+                                        <select id="keyboard_locale" name="keyboard locale">
+                                            <option value="00000409" data-lang="en-us">English (US)</option>
+                                            <option value="00000809" data-lang="en-gb">English (UK)</option>
+                                            <option value="0000041C" data-lang="sq">Albanian</option>
+                                            <option value="00000423" data-lang="be">Belarusian</option>
+                                            <option value="0000141A" data-lang="bs">Bosnian</option>
+                                            <option value="00010405" data-lang="bg">Bulgarian</option>
+                                            <option value="00000804" data-lang="zh-cn">Chinese (Simplified)</option>
+                                            <option value="00000404" data-lang="zh-tw">Chinese (Traditional)</option>
+                                            <option value="00000405" data-lang="cs">Czech</option>
+                                            <option value="00000406" data-lang="da">Danish</option>
+                                            <option value="00000413" data-lang="nl">Dutch</option>
+                                            <option value="00000425" data-lang="et">Estonian</option>
+                                            <option value="0000040B" data-lang="fi">Finnish</option>
+                                            <option value="0000040C" data-lang="fr">French</option>
+                                            <option value="0000080C" data-lang="fr-be">French (Belgium)</option>
+                                            <option value="00001009" data-lang="fr-ca">French (Canada)</option>
+                                            <option value="0000100C" data-lang="fr-ch">French (Switzerland)</option>
+                                            <option value="00000407" data-lang="de">German</option>
+                                            <option value="00000807" data-lang="de-ch">German (Switzerland)</option>
+                                            <option value="00000408" data-lang="el">Greek</option>
+                                            <option value="0000040D" data-lang="he">Hebrew</option>
+                                            <option value="0000040E" data-lang="hu">Hungarian</option>
+                                            <option value="0000040F" data-lang="is">Icelandic</option>
+                                            <option value="00000410" data-lang="it">Italian</option>
+                                            <option value="E0010411" data-lang="ja">Japanese</option>
+                                            <option value="E0010412" data-lang="ko">Korean</option>
+                                            <option value="00000426" data-lang="lv">Latvian</option>
+                                            <option value="00010427" data-lang="lt">Lithuanian</option>
+                                            <option value="00000414" data-lang="no">Norwegian</option>
+                                            <option value="00010415" data-lang="pl">Polish</option>
+                                            <option value="00000816" data-lang="pt">Portuguese</option>
+                                            <option value="00010416" data-lang="pt-br">Portuguese (Brazil)</option>
+                                            <option value="00000418" data-lang="ro">Romanian</option>
+                                            <option value="00000419" data-lang="ru">Russian</option>
+                                            <option value="0000081A" data-lang="sr">Serbian (Latin)</option>
+                                            <option value="00000C1A" data-lang="sr">Serbian (Cyrillic)</option>
+                                            <option value="0000041B" data-lang="sk">Slovak</option>
+                                            <option value="00000424" data-lang="sl">Slovenian</option>
+                                            <option value="0000040A" data-lang="es">Spanish</option>
+                                            <option value="0001040A" data-lang="es-ar">Spanish (South America)</option>
+                                            <option value="0000041D" data-lang="sv">Swedish</option>
+                                            <option value="0000041F" data-lang="tr">Turkish</option>
+                                            <option value="00000422" data-lang="uk">Ukrainian</option>
+                                            <option value="00000452" data-lang="cy">Welsh (UK)</option>
+	                                    </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="button" id="showAbout" class="buttons">About</button>
+                                        <button type="button" id="showAdvanced" class="buttons">Advanced</button>
+                                        <button type="submit">Connect</button>&nbsp;&nbsp;<button type="reset">Reset</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="footer">Copyright&copy; 2012 Ericom&reg; Software. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="advanced" class="dialog" title="Advanced Settings">
+        <form method="post">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="use_gateway" data-for="#gateway_address" autofocus="autofocus" />
+                        <label for="use_gateway">&nbsp;Use Ericom Secure Gateway</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gateway_address">&nbsp;Gateway address:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input type="text" id="gateway_address" placeholder="Computer name or IP address" spellcheck="false" autocorrect="off" autocapitalize="off" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="audiomode">Remote audio playback:</label>
+                    </td>
+                    <td>
+                        <select name="audiomode" id="audiomode" disabled="disabled">
+		                    <option value="0">Play on this computer</option>
+		                    <option value="2" selected="selected">Do not play</option>
+		                    <option value="1">Play on remote computer</option>
+	                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="convert_unicode_to_scancode" name="convert unicode to scancode" />
+                        <label for="convert_unicode_to_scancode">&nbsp;Use keyboard scan-codes</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" name="remoteapplicationmode" id="remoteapplicationmode" data-for="#alternate_shell,#shell_working_directory" />
+                        <label for="remoteapplicationmode">&nbsp;Start program on connection</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="alternate_shell">Program path and file name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="alternate shell" id="alternate_shell" spellcheck="false" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="shell_working_directory">Start in the following folder:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="shell working directory" id="shell_working_directory" spellcheck="false" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="redirect" />
+                        <label for="redirect">&nbsp;Open browser links on client (URL redirection)</label>
+                        <input type="text" name="RDP_RedirectSchemes" style="display:none" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="about" title="About" class="dialog">
+        <img src="resources/AccessNow_64.png" class="banner" alt="" />
+        <h2>Ericom<sup>&reg;</sup> AccessNow<sup>&trade;</sup></h2>
+        Version: 2.0.0.0
+        <br /><br />
+        Copyright<sup>&copy;</sup> 2012 Ericom<sup>&reg;</sup> Software Ltd.
+        <br /><br />
+        <table>
+            <tr style="font-weight:bold">
+                <td>NORTH AMERICA</td>
+                <td>UK and WESTERN EUROPE</td>
+                <td>INTERNATIONAL</td>
+            </tr>
+            <tr>
+                <td>Tel: 201 767 2210</td>
+                <td>Tel: +44 (0) 845 6443597</td>
+                <td>Tel: +972 2 591 1700</td>
+            </tr>
+            <tr>
+                <td>Fax: 201 767 2205</td>
+                <td>Fax: +44 (0) 845 6443598</td>
+                <td>Fax: +972 2 571 4737</td>
+            </tr>
+            <tr>
+                <td>Email: <a href="mailto:info@ericom.com" target="_self">info@ericom.com</a></td>
+                <td>Email: <a href="mailto:info@ericom.co.uk" target="_self">info@ericom.co.uk</a></td>
+                <td>Email: <a href="mailto:info@ericom.com" target="_self">info@ericom.com</a></td>
+            </tr>
+            <tr>
+                <td>Web: <a href="http://www.ericom.com">www.ericom.com</a></td>
+                <td>Web: <a href="http://www.ericom.co.uk">www.ericom.co.uk</a></td>
+                <td>Web: <a href="http://www.ericom.com">www.ericom.com</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <canvas id="canvas" style="display:none" width="1" height="1"></canvas>
+    </div>
+
+    <div id="clipboard_button" class="clipboard_button">
+        <img src="resources/clipboard_close.png" alt="Close" title="Close" />
+        <div id="clipboard_image">Click<br />here to<br />copy to<br />local<br />clipboard</div>
+    </div>
+    <div id="clipboard_container" title="Copy to local clipboard" class="dialog">
+        <textarea rows="6" cols="60"></textarea>
+        <p>Click CTRL+C or right-click on the text and select Copy to copy into the local clipboard.</p>
+    </div>
+    <div id="clipboard_dialog" title="Copy to remote clipboard" class="dialog">
+        <textarea rows="6" cols="64"></textarea>
+        <p>Paste text into area above using CTRL+V or right-click and select Paste<br />then click Copy to place text in the remote clipboard.</p>
+    </div>
+
+    <div id="menus">
+        <div id="clipboard_menu" title="Open clipboard" class="menu"></div>
+        <div id="upload_menu" title="Upload files" class="menu"></div>
+        <div id="download_menu" title="Download files" class="menu"></div>
+    </div>
+
+    <div id="virt_keyboard" class="menu">
+        <input type="text" spellcheck="false" autocorrect="off" autocapitalize="off" />
+    </div>
+</body>
+<head>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+</head>
+</html>

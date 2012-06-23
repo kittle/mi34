@@ -1,0 +1,207 @@
+﻿body, img
+{
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+body
+{
+	color:White;
+	background-color:#01325a;
+}
+body, form, table
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+table
+{
+	width:100%;
+}
+canvas
+{
+	display:none;
+}
+a
+{ 
+	color:#eebb55;
+}
+.top
+{
+	position:absolute;
+	width:100%;
+	height:52px;
+	background-image:url(resources/top.png);
+	background-repeat:repeat;
+}
+.container
+{
+	position:relative;
+	top:52px;
+	width:700px;
+	height:1px;
+	margin:0px auto;
+}
+.logo
+{
+	position:absolute;
+	left:40px;
+	top:-52px;
+}
+.html5
+{
+	position:absolute;
+	left:624px;
+	top:-51px;
+}
+.globe
+{
+	position:absolute;
+	left:-70px;
+}
+.outer
+{
+	position:absolute;
+	left:36px;
+	top:30px;
+	width:600px;
+	height:500px;
+	padding:15px;
+	background-color:#001523;
+	border-style:groove;
+	border-color:#67879e;
+	border-width:4px 0px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	-moz-box-shadow: 10px 30px 20px #002545;
+	-webkit-box-shadow: 10px 30px 20px #002545;
+	box-shadow: 10px 30px 20px #002545;
+}
+.inner
+{
+	position:absolute;
+	left:78px;
+	top:120px;
+	width:540px;
+	height:406px;
+	border-style:solid;
+	border-color:#eebb55;
+	border-width:0px 2px 2px 2px;
+}
+.inside
+{
+	position:absolute;
+	top:10px;
+	width:540px;
+	height:396px;
+	background-color:Gray;
+	opacity:0.2;
+	filter:alpha(opacity=20);
+}
+.title, .footer
+{
+	position:absolute;
+	text-align:center;
+	width:100%;
+	cursor:default;
+}
+.title
+{
+	top:56px;
+	font-size:38px;
+	text-shadow:0px 0px 4px #FFFFFF;
+}
+sup
+{
+	font-size:70%;
+}
+.footer
+{
+	top:512px;
+	font-size:10px;
+}
+.settings
+{
+	display:none;
+	position:absolute;
+	top:140px;
+	left:100px;
+	width:500px;
+}
+td
+{
+	vertical-align:middle;
+	text-align:left;
+}
+h2, th
+{
+	font-size:20px;
+	font-weight:normal;
+	color: #E1F7FF;
+}
+h2
+{
+	margin:0px 0px 10px 0px;
+}
+th
+{
+	text-align:left;
+	padding-bottom:20px;
+}
+input, select
+{
+	background:#E1F7FF;
+	border:none;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	border-radius:3px;
+	font:13px Georgia, "Times New Roman", Times, serif;
+	outline:none;
+	padding:2px;
+}
+input:not([type=submit]):focus, select:focus
+{
+	background: #ffffff;
+	box-shadow: 0 0 3px #7FDEFF, 0 0 3px #7FDEFF, 0 0 3px #7FDEFF;
+}
+input:not([type=checkbox])
+{
+	width:170px;
+}
+select
+{
+	width:174px;
+}
+#desktops
+{
+	overflow-y:auto;
+	height:270px;
+}
+#desktop_list input:not([type=checkbox])
+{
+	width:300px;
+}
+#desktop_list select
+{
+	width:304px;
+}
+#gateway_address
+{
+	width:200px !important;
+}
+.dialog
+{
+	display:none;
+	background:#01325a url(resources/dialog.jpg) no-repeat !important;
+	text-align:center;
+}
+#showAbout
+{
+	margin:20px 40px 0px 0px;
+}
+#about
+{
+	width:100%;
+	background-image:url(resources/about.jpg) !important;
+}
